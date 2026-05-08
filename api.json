@@ -1,8 +1,8 @@
 {
   "meta": {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "schema_version": "1.0.0",
-    "last_updated": "2026-02-13",
+    "last_updated": "2026-05-07",
     "repository": "https://github.com/wyrdness/earthquake-lights",
     "maintainers": [
       {
@@ -16,111 +16,349 @@
       "content": "CC-BY-4.0"
     }
   },
+
   "phenomenon": {
     "id": "earthquake-lights",
     "name": "Earthquake Lights",
-    "aliases": [],
-    "category": "ATMOSPHERIC_PHENOMENON",
-    "subcategory": "(igneous, crystalline rocks)",
-    "tags": [
-      "folklore",
-      "mythology"
+    "aliases": [
+      { "name": "EQL", "meaning": "abbreviation in scientific literature" },
+      { "name": "earthquake luminescence", "meaning": "general scientific synonym" },
+      { "name": "earthquake lightning" },
+      { "name": "seismic lights" }
     ],
-    "status": "documented",
+    "category": "ATMOSPHERIC_PHENOMENON",
+    "subcategory": "Geophysical luminescence",
+    "tags": [
+      "geophysics",
+      "seismology",
+      "atmospheric-optics",
+      "piezoelectricity",
+      "positive-holes",
+      "preseismic",
+      "coseismic"
+    ],
+    "status": "active",
     "description": {
-      "summary": "Earthquake lights (EQL), also known as earthquake luminescence or seismic lights, are unusual luminous phenomena that appear in the sky or near the ground before, during, or after seismic activity.",
-      "full": "Earthquake lights (EQL), also known as earthquake luminescence or seismic lights, are unusual luminous phenomena that appear in the sky or near the ground before, during, or after seismic activity. These mysterious lights have been reported for centuries across earthquake-prone regions worldwide, manifesting in various forms including glowing orbs, sheet lightning, flame-like columns, and aurora-like displays. While historically dismissed as folklore or misidentified conventional phenomena, recent scientific research has confirmed their reality and proposed several mechanisms involving piezoelectric effects, release of charged particles, and electromagnetic disturbances in the Earth's crust. The phenomenon gained scientific credibility in the late 20th and early 21st centuries as photographic and video evidence accumulated, and as theoretical frameworks from plasma physics, materials science, and geophysics provided plausible explanations. Earthquake lights represent a fascinating intersection of seismology, atmospheric physics, and electromagnetic phenomena, offering potential applications in earthquake prediction and early warning systems."
+      "summary": "Luminous optical phenomena reported in the sky or near the ground before, during, or shortly after seismic activity, with reports spanning more than a millennium.",
+      "full": "Earthquake lights (EQL) are anomalous luminous phenomena reported in the sky or near the ground in association with seismic activity, often described as glowing orbs, sheet-like flashes, blue-white discharges, flame-like columns, or aurora-like glows. Reports go back more than a thousand years (the 869 Jōgan earthquake in Japan is among the earliest written accounts) and continued sporadically through the 19th and 20th centuries before becoming photographically documented in the 1965–1967 Matsushiro swarm in Nagano, Japan. Modern scientific work distinguishes preseismic lights (occurring seconds to weeks before a major earthquake, generally close to the epicentre) from coseismic lights (occurring during seismic-wave passage, sometimes hundreds of kilometres away). The 2014 study by Robert Thériault and Friedemann Freund in 'Seismological Research Letters' compiled 65 documented cases since 1600 and proposed that the lights occur predominantly along subvertical faults in rifting environments. The leading mechanistic hypotheses involve mobilisation of positive holes (peroxy-bond defects in stressed igneous rock; Freund), piezoelectric generation in quartz-rich rocks, and triboelectric / triboluminescent processes (Shinbrot et al., 2014). Mainstream geophysics now broadly accepts that EQL exist as a real if poorly-understood phenomenon, while remaining cautious about specific reports."
     },
     "etymology": {
-      "origin": "Unknown",
-      "meaning": "To be documented",
-      "first_use": "Unknown"
+      "origin": "English compound term coined in mid-20th-century geophysical literature; Japanese parallel terms ('jishin no hikari', 'earthquake light') used during the Matsushiro photographic documentation.",
+      "meaning": "Lights (luminous phenomena) associated in space and time with earthquakes.",
+      "first_use": "Coined in scientific literature in the 1960s following the Matsushiro earthquake swarm photographs."
     }
   },
+
   "classification": {
     "taxonomy": {
       "category": "ATMOSPHERIC_PHENOMENON",
-      "type": "(igneous, crystalline rocks)",
-      "subtype": "Unknown",
-      "variant": "Unknown"
+      "type": "Geophysical luminescence",
+      "subtype": "Preseismic / coseismic luminous phenomenon",
+      "variant": "Global"
     },
-    "related_phenomena": []
+    "related_phenomena": [
+      { "id": "ball-lightning", "name": "Ball Lightning", "relationship": "similar", "description": "Other rare luminous atmospheric phenomenon with debated mechanism" },
+      { "id": "st-elmos-fire", "name": "St. Elmo's Fire", "relationship": "similar", "description": "Plasma-based atmospheric glow on conductors in strong electric fields" },
+      { "id": "aurora-phenomena", "name": "Aurora Phenomena", "relationship": "related", "description": "Other atmospheric ionisation-based luminous phenomenon" },
+      { "id": "min-min-lights", "name": "Min-Min Lights", "relationship": "related", "description": "Anomalous nocturnal lights with debated origins" },
+      { "id": "hessdalen-lights", "name": "Hessdalen Lights", "relationship": "related", "description": "Geographically-localised anomalous lights with proposed geological mechanisms" }
+    ]
   },
+
   "characteristics": {
     "physical": {
-      "features": [],
-      "morphology": "See README.md for detailed physical description"
+      "coloration": ["white", "blue", "blue-white", "orange", "violet", "green"],
+      "features": [
+        { "feature": "Spherical or globular shapes", "description": "Glowing orbs floating or moving above the ground; sometimes the most consistently photographed form", "frequency": "common" },
+        { "feature": "Sheet-like flashes", "description": "Sky-wide flashes resembling diffuse lightning, sometimes lasting fractions of a second", "frequency": "common" },
+        { "feature": "Flame-like ground columns", "description": "Vertical, flame-shaped luminous columns rising from ridges or fault traces", "frequency": "occasional" },
+        { "feature": "Aurora-like glow", "description": "Diffuse low-altitude glow resembling auroral light", "frequency": "occasional" },
+        { "feature": "Long range from epicentre", "description": "Lights reported up to 110 km from the epicentre (1930 Idu) and at greater distances during seismic-wave passage", "frequency": "occasional" }
+      ],
+      "morphology": "Optical / plasma phenomena rather than physical bodies; typical durations from milliseconds (flashes) to many seconds (orbs and columns)."
     },
-    "abilities": [],
+    "abilities": [
+      { "ability": "Pre-seismic appearance", "description": "Some reports occur seconds, hours, or days before the principal seismic event, raising hopes (and controversy) about earthquake prediction", "frequency": "occasional", "evidence_level": "documented" },
+      { "ability": "Co-seismic appearance", "description": "Many reports coincide with seismic-wave arrival; modern security-camera footage (e.g. 2017 Chiapas, 2022 Michoacán) supports these accounts", "frequency": "common", "evidence_level": "documented" }
+    ],
     "behavior": {
-      "activity_period": "unknown",
-      "disposition": "unknown",
-      "habitat_preference": []
+      "activity_period": "variable",
+      "disposition": "neutral",
+      "social_structure": "unknown",
+      "habitat_preference": [
+        "active fault zones",
+        "subvertical faults in continental rift environments",
+        "quartz-rich crystalline basement rocks"
+      ],
+      "patterns": [
+        "Concentrate within tens of kilometres of the epicentre for preseismic events",
+        "Appear at much greater distances during seismic-wave passage (reported 740 km from a 2017 Chiapas earthquake)",
+        "Strongly correlated with shallow continental earthquakes; less common with deep or subduction-interface events"
+      ]
     }
   },
+
   "distribution": {
     "range": {
-      "description": "Unknown",
-      "continents": [],
-      "countries": [],
-      "regions": []
+      "description": "Global; reported wherever earthquakes occur, with relatively higher report frequency in South America, China, southern Europe (Greece, Italy, France, Germany), and Japan; lower in North America.",
+      "continents": ["Asia", "Europe", "South America", "North America", "Oceania"],
+      "countries": [
+        "Japan", "China", "Italy", "Greece", "France", "Germany", "Peru", "Chile", "Mexico", "United States", "Canada", "New Zealand"
+      ],
+      "regions": [
+        "Pacific Ring of Fire",
+        "Mediterranean–Himalayan belt",
+        "Andean subduction zone",
+        "East African Rift"
+      ]
     },
-    "hotspots": [],
+    "hotspots": [
+      {
+        "name": "Matsushiro earthquake swarm",
+        "location": {
+          "description": "Matsushiro, Nagano Prefecture, Japan",
+          "country": "Japan",
+          "region": "Nagano Prefecture",
+          "coordinates": { "latitude": 36.5667, "longitude": 138.2000 }
+        },
+        "peak_period": "1965–1967",
+        "notes": "First well-documented photographic record of EQL, established by Yutaka Yasui and others"
+      }
+    ],
     "temporal": {
       "first_recorded": {
-        "date": "Unknown",
+        "date": "0869",
         "circa": true,
-        "source": "Traditional folklore"
-      }
+        "source": "Japanese Sandai Jitsuroku (chronicle of the 869 Jōgan earthquake)"
+      },
+      "peak_activity_periods": [
+        { "period": "1965–1967", "description": "Matsushiro swarm photographic documentation establishing scientific credibility" },
+        { "period": "2007–present", "description": "Widespread phone, dashcam, and security-camera footage (Peru 2007, Chile 2010, Chiapas 2017, Michoacán 2022)" }
+      ]
     }
   },
+
   "history": {
     "origins": {
-      "cultural_roots": "Unknown",
-      "earliest_accounts": "See README.md for historical details",
-      "folklore_connections": "Unknown"
+      "cultural_roots": "Pre-modern records appear in Japanese, Chinese, and European chronicles; the phenomenon was widely treated as folklore or as misperception until the 1960s.",
+      "earliest_accounts": "869 Jōgan earthquake (Japan) records 'strange lights in the sky'; 1888 North Canterbury (New Zealand) and 1906 San Francisco accounts are among the earliest in English-language seismology literature.",
+      "folklore_connections": "Pre-scientific narratives often interpreted EQL as omens, dragon breath, or atmospheric ghost-lights; modern study reframes the phenomenon as geophysical."
     },
-    "timeline": []
+    "timeline": [
+      { "date": "0869-07-09", "event": "Sandai Jitsuroku records 'strange lights in the sky' coinciding with the Jōgan earthquake (Japan)", "significance": "Among the earliest written EQL records", "source": "Sandai Jitsuroku (Japanese imperial chronicle)" },
+      { "date": "1930-11-26", "event": "Lights reported up to 110 km from the epicentre of the Idu earthquake (Japan)", "significance": "Important early modern observation of long-range EQL", "source": "Wikipedia, Earthquake light (citing Japanese seismological reports)" },
+      { "date": "1965-08-03", "event": "Beginning of the Matsushiro earthquake swarm; subsequent EQL photographs by Yutaka Yasui establish scientific credibility", "significance": "First well-photographed EQL record", "source": "Yasui, Y. (1968), Bulletin of the Seismological Society of America" },
+      { "date": "1973-01-01", "event": "J. S. Derr publishes a survey paper concluding that 'the existence of luminous phenomena…is well established'", "significance": "Mid-1970s mainstream acceptance of EQL existence", "source": "Derr, J. S. (1973), Bulletin of the Seismological Society of America" },
+      { "date": "2003-01-01", "event": "Friedemann Freund and colleagues publish work on positive-hole charge carriers in stressed igneous rock as a candidate EQL mechanism", "significance": "Establishes the dominant modern mechanistic hypothesis", "source": "Freund, F. T. et al. (2003), Journal of Scientific Exploration" },
+      { "date": "2014-01-01", "event": "Robert Thériault, Friedemann Freund, and colleagues publish 'Prevalence of Earthquake Lights Associated with Rift Environments' in 'Seismological Research Letters', surveying 65 cases since 1600", "significance": "Most comprehensive modern catalogue and tectonic-context analysis", "source": "Thériault, R. et al. (2014), Seismological Research Letters" },
+      { "date": "2014-07-09", "event": "Troy Shinbrot and colleagues publish a triboelectric-discharge mechanism in 'Physical Review Letters'", "significance": "Provides a complementary laboratory mechanism for EQL", "source": "Shinbrot, T. et al. (2014), Physical Review Letters" },
+      { "date": "2017-09-08", "event": "EQL captured on multiple security cameras during the magnitude-8.2 Chiapas earthquake (Mexico), including in Mexico City ~740 km from the epicentre", "significance": "High-quality modern coseismic EQL evidence", "source": "Mexican news media and seismological agencies" },
+      { "date": "2022-09-22", "event": "EQL captured during a magnitude-6.8 aftershock of the Michoacán earthquake (Mexico)", "significance": "Further modern coseismic EQL documentation", "source": "Mexican news media and seismological agencies" }
+    ],
+    "modern_era": "EQL are now treated as a real but mechanism-uncertain geophysical phenomenon. Active research focuses on field observation networks, laboratory rock-deformation experiments, and statistical correlation between EQL reports and tectonic context."
   },
+
   "sightings": {
     "statistics": {
-      "total_documented": 0,
+      "total_documented": 65,
       "verified": 0,
       "disputed": 0,
-      "debunked": 0
+      "debunked": 0,
+      "date_range": { "earliest": "0869", "latest": "2022" }
     },
-    "notable": [],
+    "notable": [
+      {
+        "id": "eql-matsushiro-1965",
+        "name": "Matsushiro earthquake swarm EQL",
+        "date": { "value": "1965-08-03", "precision": "approximate" },
+        "location": {
+          "description": "Matsushiro, Nagano Prefecture, central Japan",
+          "country": "Japan",
+          "region": "Nagano Prefecture",
+          "coordinates": { "latitude": 36.5667, "longitude": 138.2000, "precision": "approximate" }
+        },
+        "witnesses": {
+          "count": 0,
+          "types": ["Multiple residents and seismologists; photographic record"],
+          "credibility_factors": ["Long swarm with extensive photographic documentation", "Documented by Yutaka Yasui in peer-reviewed seismology"]
+        },
+        "description": "During the 1965–1967 Matsushiro earthquake swarm, residents and observers photographed luminous spheres and flame-like emissions associated with earthquake events. The Yasui (1968) catalogue is considered the first photographically-documented EQL record.",
+        "conditions": { "weather": "Variable", "visibility": "Night and day observations", "time_of_day": "Multiple", "duration": "Months (swarm) with discrete EQL events" },
+        "evidence": ["Photographs published in seismological literature", "Multiple independent observer reports"],
+        "credibility": { "rating": "high", "factors": ["Peer-reviewed publication of photographic record"], "notes": "Foundational case for scientific acceptance of EQL." },
+        "sources": ["Yasui, Y. (1968), Bulletin of the Seismological Society of America"],
+        "featured": true
+      },
+      {
+        "id": "eql-saguenay-1988",
+        "name": "Saguenay earthquake EQL",
+        "date": { "value": "1988-11-25", "precision": "exact" },
+        "location": {
+          "description": "Saguenay region, Quebec, Canada",
+          "country": "Canada",
+          "region": "Quebec"
+        },
+        "witnesses": { "count": 46, "types": ["Public reports collated post-event by seismologists"], "credibility_factors": ["Multiple independent reports", "Studied by John Derr"] },
+        "description": "The magnitude-5.9 Saguenay earthquake of 25 November 1988 was followed by 46 documented reports of luminous phenomena, used in subsequent academic work as a benchmark modern North American case.",
+        "conditions": { "weather": "Late autumn", "visibility": "Mostly nocturnal observations", "time_of_day": "Evening", "duration": "Multiple discrete events" },
+        "evidence": ["Citizen reports collected by seismological agencies"],
+        "credibility": { "rating": "medium", "factors": ["Eyewitness only", "Collected after the fact"], "notes": "Frequently cited in EQL meta-analyses." },
+        "sources": ["Thériault, R. et al. (2014), Seismological Research Letters"],
+        "featured": false
+      },
+      {
+        "id": "eql-chiapas-2017",
+        "name": "Chiapas earthquake EQL",
+        "date": { "value": "2017-09-08", "precision": "exact" },
+        "location": {
+          "description": "Mexico City and other cities up to ~740 km from the magnitude-8.2 Chiapas epicentre",
+          "country": "Mexico",
+          "region": "Central and southern Mexico"
+        },
+        "witnesses": { "count": 0, "types": ["Multiple security and traffic cameras", "Public phone footage"], "credibility_factors": ["Independent multi-camera capture"] },
+        "description": "Brief blue-white sky flashes, captured by security and dashboard cameras during seismic-wave passage from the magnitude-8.2 earthquake off Chiapas, were reported in Mexico City and elsewhere.",
+        "conditions": { "weather": "Clear", "visibility": "Night, urban", "time_of_day": "Late evening (~23:50 local)", "duration": "Seconds (multiple discrete flashes)" },
+        "evidence": ["Public camera footage", "Mexican news coverage"],
+        "credibility": { "rating": "medium", "factors": ["Some footage attributable to power-grid arcing rather than EQL", "Other footage unexplained by infrastructure failures"], "notes": "Mainstream coverage acknowledged a mix of grid-arcing and apparent EQL." },
+        "sources": ["Mexican Servicio Sismológico Nacional (2017)"],
+        "featured": false
+      }
+    ],
     "database_path": "./sightings/"
   },
+
   "evidence": {
     "physical": [],
-    "photographic": [],
-    "video": [],
+    "photographic": [
+      {
+        "id": "eql-evidence-yasui-1965",
+        "type": "photograph",
+        "name": "Yasui Matsushiro photographs",
+        "date": "1965",
+        "description": "Photographs taken during the Matsushiro earthquake swarm and published by Yutaka Yasui (1968) in the Bulletin of the Seismological Society of America.",
+        "status": "verified",
+        "analysis": "First photographically documented EQL record; the principal source supporting mainstream scientific acceptance.",
+        "source": "Yasui (1968)"
+      }
+    ],
+    "video": [
+      {
+        "id": "eql-evidence-chiapas-2017",
+        "type": "video",
+        "name": "Chiapas earthquake EQL footage",
+        "date": "2017-09-08",
+        "description": "Multiple security-camera and phone-camera videos showing blue-white sky flashes during the M8.2 Chiapas earthquake, with some footage explained by power-grid arcing.",
+        "status": "disputed",
+        "analysis": "Mix of confirmed power-grid arcing and apparent atmospheric flashes; widely cited in modern EQL discussion.",
+        "source": "Mexican news media, 2017"
+      }
+    ],
     "audio": [],
-    "trace": []
+    "trace": [],
+    "documentary": [
+      {
+        "id": "eql-evidence-theriault-2014",
+        "type": "scientific paper",
+        "name": "Prevalence of Earthquake Lights Associated with Rift Environments",
+        "date": "2014",
+        "description": "Survey of 65 documented EQL cases since 1600 in 'Seismological Research Letters', proposing tectonic-context patterns.",
+        "status": "verified",
+        "analysis": "Most-cited modern catalogue; supports the 'subvertical faults in rift environments' tectonic-correlation hypothesis.",
+        "source": "Thériault et al. (2014), Seismological Research Letters"
+      }
+    ]
   },
+
   "theories": {
     "paranormal": [],
-    "scientific": [],
-    "skeptical": []
+    "scientific": [
+      {
+        "name": "Positive-hole (p-hole) charge carriers (Freund mechanism)",
+        "description": "Stressed igneous rocks containing peroxy bonds release positive-hole charge carriers under compression; these carriers travel through the rock to the surface and ionise air, producing plasma luminescence at the ground or in the lower atmosphere.",
+        "proponents": ["Friedemann Freund", "Robert Thériault", "John Scoville"],
+        "evidence_cited": ["Laboratory rock-stress experiments", "Correlation of EQL with subvertical faults in rifting tectonic environments (Thériault et al. 2014)"]
+      },
+      {
+        "name": "Piezoelectric generation",
+        "description": "Quartz-rich rocks under tectonic stress generate strong electric fields by the piezoelectric effect, occasionally sufficient to drive air breakdown and luminescence.",
+        "proponents": ["Various 1960s–1980s authors"],
+        "evidence_cited": ["Quartz-rich basement rock geology of many EQL-active regions", "Bench-scale piezoelectric voltage measurements"]
+      },
+      {
+        "name": "Triboelectric / triboluminescent discharge (Shinbrot et al. 2014)",
+        "description": "Rubbing of identical rock layers under shear during fault movement generates voltage spikes and luminescence even without piezoelectric or peroxy-bond mechanisms.",
+        "proponents": ["Troy Shinbrot (Rutgers University)"],
+        "evidence_cited": ["Laboratory triboelectric experiments", "Generality across rock compositions"]
+      },
+      {
+        "name": "Ionosphere / magnetic-field disturbance",
+        "description": "Local disruption of Earth's magnetic field associated with seismic activity can produce ionospheric radiative recombination resembling auroral glow.",
+        "proponents": ["Various 20th-century seismologists"],
+        "evidence_cited": ["Ionospheric Total Electron Content (TEC) anomalies near major earthquakes"]
+      }
+    ],
+    "skeptical": [
+      {
+        "name": "Misidentification of conventional phenomena",
+        "description": "Many alleged EQL reports are explained by lightning from concurrent storms, electrical arcing of swayed power lines, transformer flashovers, or auroral activity.",
+        "proponents": ["United States Geological Survey", "Brian Dunning", "Robert Sheaffer"],
+        "evidence_cited": ["Identifiable transformer arcing in multiple Chile (2010) and Chiapas (2017) videos", "Coincident lightning records in some reports"]
+      }
+    ]
   },
+
   "cultural": {
     "folklore": {
-      "traditions": [],
-      "stories": [],
-      "beliefs": "See README.md for cultural context"
+      "traditions": [
+        "Japanese chronicles describing 'strange lights' before earthquakes (Sandai Jitsuroku)",
+        "Andean and Mesoamerican narratives of luminous omens before major quakes",
+        "European mediaeval omen literature recording lights with seismic events"
+      ],
+      "stories": [
+        "869 Jōgan earthquake records",
+        "1906 San Francisco earthquake light reports",
+        "Modern crowd-sourced testimony in Japan, Chile, and Mexico"
+      ],
+      "beliefs": "Pre-modern interpretations included dragon breath (East Asia), divine omens (Japan, Andes), and ghost-lights (Europe). Modern interpretation is geophysical."
     },
     "popular_culture": {
-      "literature": [],
-      "film_tv": [],
+      "literature": [
+        "'Earthquake Lights and Their Significance' — discussion in Friedemann Freund's collected work"
+      ],
+      "film_tv": [
+        "Featured in BBC Horizon and NHK documentary segments on earthquake science",
+        "Discussed in Discovery Channel programming on earthquake prediction"
+      ],
       "games": [],
-      "other": []
+      "other": [
+        "EQL frequently cited in earthquake-prediction popular literature, often beyond the support of current evidence"
+      ]
     }
   },
+
   "research": {
-    "researchers": [],
-    "organizations": [],
-    "ongoing_studies": "None documented"
+    "researchers": [
+      { "name": "Friedemann T. Freund", "affiliation": "NASA Ames Research Center / SETI Institute / San Jose State University", "contribution": "Developed the positive-hole charge-carrier mechanism for EQL and pre-earthquake electromagnetic anomalies", "period": "1990s–present" },
+      { "name": "Robert Thériault", "affiliation": "Ministère de l'Énergie et des Ressources naturelles, Quebec", "contribution": "Lead author on the 2014 'Seismological Research Letters' EQL prevalence survey", "period": "2010s" },
+      { "name": "John S. Derr", "affiliation": "United States Geological Survey", "contribution": "Author of foundational 1973 review establishing scientific recognition of EQL", "period": "1970s–2000s" },
+      { "name": "Troy Shinbrot", "affiliation": "Rutgers University", "contribution": "Triboelectric / triboluminescent EQL mechanism (2014)", "period": "2010s" },
+      { "name": "Yutaka Yasui", "affiliation": "Japan Meteorological Agency", "contribution": "First peer-reviewed photographic documentation of EQL during the Matsushiro swarm", "period": "1960s" }
+    ],
+    "organizations": [
+      { "name": "United States Geological Survey", "url": "https://www.usgs.gov", "focus": "Seismological research and EQL contextualisation" },
+      { "name": "Seismological Society of America", "url": "https://www.seismosoc.org", "focus": "Publishes the 'Bulletin of the Seismological Society of America' and 'Seismological Research Letters'" },
+      { "name": "Servicio Sismológico Nacional (UNAM)", "url": "https://www.ssn.unam.mx", "focus": "Mexican seismology and EQL field reports" }
+    ],
+    "ongoing_studies": "Active research areas include statistical analysis of citizen-camera EQL records, laboratory replication of positive-hole and triboelectric mechanisms, ionospheric TEC monitoring in seismic regions, and field-electrode arrays at active fault zones."
   },
-  "sources": []
+
+  "sources": [
+    { "id": "theriault-2014", "type": "paper", "title": "Prevalence of Earthquake Lights Associated with Rift Environments", "authors": ["Robert Thériault", "France St-Laurent", "Friedemann T. Freund", "John S. Derr"], "publication": "Seismological Research Letters", "date": "2014", "doi": "10.1785/0220130059" },
+    { "id": "shinbrot-2014", "type": "paper", "title": "Size-dependent particle migration and triboelectric charge segregation", "authors": ["Troy Shinbrot"], "publication": "Physical Review Letters", "date": "2014" },
+    { "id": "freund-2003", "type": "paper", "title": "Rocks That Crackle and Sparkle and Glow: Strange Pre-Earthquake Phenomena", "authors": ["Friedemann T. Freund"], "publication": "Journal of Scientific Exploration", "date": "2003" },
+    { "id": "yasui-1968", "type": "paper", "title": "A study on the luminous phenomena accompanied with earthquake (Part I)", "authors": ["Yutaka Yasui"], "publication": "Memoirs of the Kakioka Magnetic Observatory", "date": "1968" },
+    { "id": "derr-1973", "type": "paper", "title": "Earthquake lights: A review of observations and present theories", "authors": ["John S. Derr"], "publication": "Bulletin of the Seismological Society of America", "date": "1973" },
+    { "id": "wikipedia-eql", "type": "website", "title": "Earthquake light", "url": "https://en.wikipedia.org/wiki/Earthquake_light", "accessed": "2026-05-07" },
+    { "id": "usgs-eql", "type": "website", "title": "USGS — Are 'earthquake lights' real?", "url": "https://www.usgs.gov/faqs/are-earthquake-lights-real", "accessed": "2026-05-07" }
+  ]
 }
